@@ -1,0 +1,14 @@
+manifest:
+  projects:
+    - name: zephyr
+      url: https://github.com/zephyrproject-rtos/zephyr
+      revision: v3.7.0
+      west-commands: scripts/west-commands.yml
+      import:
+        # Limit the Zephyr modules to the required set
+        name-allowlist:
+          - hal_espressif
+          - mbedtls
+          - tinycrypt
+          - mcuboot
+          - zcbor

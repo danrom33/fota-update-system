@@ -1,0 +1,17 @@
+/ {
+    aliases {
+        led0 = &led0;
+    };
+    chosen {
+        zephyr,uart-mcumgr = &uart0;
+    };
+};
+
+&gpio0 {
+    leds: leds {
+        compatible="gpio-leds";
+        led0: led_0{
+            gpios = <&gpio0 23 GPIO_ACTIVE_HIGH>;
+        };
+    };
+};
